@@ -1,4 +1,4 @@
-# FireNET-HackMIT
+# FireNET-HackMIT (Arduino)
 
 **FireNET - HackMIT 2023
 Collaborated in a team of four to create F.I.R.E.N.E.T: IoT for wildfire detection & real-time evacuation. Arduinos, Raspberry Pi & 3D maps guide you to safety. Built for community & high-risk groups. More than tech; it's life-saving.
