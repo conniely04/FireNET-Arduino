@@ -36,6 +36,8 @@ const int sensorMin = 0;
 const int sensorMax = 1024;
 unsigned long previousMillis =0;
 const long interval = 120000;
+int lat = 23;
+
 
 
 void printWifiData() {
@@ -193,8 +195,17 @@ Serial.println("loop.");
 
   messageObject["Temperature"] =String((float)DHT11.temperature);
 
-  Serial.println("Station ID: ");
-  messageObject["Station"] = String(id)
+  Serial.println("Station: ");
+  messageObject["Station"] = "Station 20";
+
+  Serial.println("Latitude: ");
+  messageObject["lat"] = 42.3744;
+
+  Serial.println("Longitude: ");
+  messageObject["lon"]= 71.116943;
+
+
+  
  
 
 
@@ -233,6 +244,8 @@ Serial.println("loop.");
 
   }else if(analogValue < 1023){
     Serial.println("Flame detected(analog)");
+    //sending fire message 
+    messageObject["FlameSensor"] =String(analogValue + "is on fire");
     digitalWrite(LED_PIN_RED, HIGH);
     digitalWrite(LED_PIN_GREEN,LOW);
     digitalWrite(LED_PIN_YELLOW,LOW);
@@ -268,5 +281,7 @@ Serial.println("loop.");
 
   
 }
+
+
 
 
